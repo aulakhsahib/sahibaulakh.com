@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  src: url(./assets/fonts/static/SpaceGrotesk-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  src: url(./assets/fonts/static/SpaceGrotesk-Bold.ttf) format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+:root {
+  --blackish: hsl(0, 0%, 8%);
+  --light-blackish: hsl(0, 0%, 14%);
+  --grey: hsl(0, 0%, 85%);
+  --white: hsl(0, 0%, 100%);
+  --peach: hsl(12, 100%, 79%);
+
+  --heading-large-size: 5.5rem;
+  --heading-large-line-height: 1em;
+  --heading-large-char-spacing: -2.5px;
+
+  --heading-medium-size: 3rem;
+  --heading-medium-line-height: 1.15em;
+  --heading-medium-char-spacing: -1.5px;
+
+  --heading-small-size: 2rem;
+  --heading-small-line-height: 1.35em;
+
+  --normal-text: 1.125rem;
+  --normal-line-height: 1.5em;
+}
+
+body {
+  background-color: var(--blackish);
+  color: var(--white);
+}
+
+.main-wrapper-container {
+  width: 90%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("./assets/images/sahib.webp");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 445px 600px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.author-name-container {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+.author-name-container a {
+  appearance: none;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.social-media-logo-container {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-section {
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+}
+
+.hero-heading {
+  font-size: 5.5rem;
+  line-height: 1em;
+  letter-spacing: -2.5px;
+  max-width: 14ch;
+}
+
+.underlined-word {
+  text-decoration: underline;
+  text-decoration-color: var(--peach);
+}
+
+.hero-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--grey);
+  max-width: 36ch;
+}
+
+.contact-me-link {
+  color: var(--white);
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.contact-me-link:hover {
+  color: var(--peach);
+}
+
+.hero-section-break {
+  color: var(--grey);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.skills-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-heading {
+  color: var(--peach);
+  font-size: 3.5rem;
+  line-height: 1.15em;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  font-size: 3rem;
+  line-height: 1.15em;
+  letter-spacing: -1.5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.skills > p {
+  padding: 1rem;
+}
+.skills > p:hover {
+  color: var(--peach);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.project-header h2 {
+  color: var(--peach);
+  font-size: 3.5rem;
+  line-height: 1.15em;
+  letter-spacing: 2px;
+}
+
+.project-showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+}
+
+.project-image-container {
+  position: relative;
+}
+
+.project-info-container {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  cursor: pointer;
+}
+.project-info-container a {
+  color: var(--white);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+  cursor: pointer;
+}
+.project-info-container a:hover {
+  color: var(--peach);
+}
+.project-name {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+.hidden {
+  display: none;
+}
+
+.project-info-container-tablet {
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  visibility: hidden;
+}
+
+.project-info-container-tablet a {
+  color: var(--white);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+  cursor: pointer;
+}
+.project-info-container-tablet a:hover {
+  color: var(--peach);
+}
+
+.footer {
+  background-color: var(--light-blackish);
+  padding: 2rem;
+}
+
+.footer-wrapper {
+  width: 90%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-wrapper-container {
+    background-image: none;
+  }
+
+  body {
+    background-image: url("./assets/images/sahib.webp");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 322px 600px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .hero-heading {
+    font-size: 3rem;
+    line-height: 1.15em;
+    letter-spacing: -1.5px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .project-info-container {
+    display: none !important;
+  }
+
+  .project-info-container-tablet {
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-image: url("./assets/images/sahib.webp");
+    background-position: top center;
+    background-size: 174px 383px;
+  }
+
+  .hero-section {
+    margin-top: 20rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero-heading,
+  .hero-content {
+    max-width: unset;
+    text-align: center;
+  }
+
+  .hero-section .contact-me-link {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project-showcase-container {
+    grid-template-columns: unset;
+  }
+
+  .project-header h2 {
+    color: var(--peach);
+    font-size: 2rem;
+    line-height: 1.35em;
+    letter-spacing: 0px;
+  }
+
+  .skills-heading {
+    font-size: 2rem;
+    line-height: 1.35em;
+    letter-spacing: 0px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: 2.25rem;
+    line-height: 1.15em;
+    letter-spacing: -1.5px;
+  }
+}
